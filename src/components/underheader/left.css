@@ -1,0 +1,6 @@
+.left-pane{
+    background: pink;
+    width: 30vw;
+    height: 80vh;
+    overflow: auto;
+}

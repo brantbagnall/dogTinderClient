@@ -1,0 +1,6 @@
+.right-pane{
+    background: blue;
+    width: 30vw;
+    height: 80vh;
+    overflow: auto;
+}
