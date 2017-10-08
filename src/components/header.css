@@ -1,7 +1,7 @@
 .header_start{
     height: 20vh;;
     width: 100vw;
-    background: red;
+    background: white;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

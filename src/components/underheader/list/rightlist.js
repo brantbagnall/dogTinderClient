@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {test} from './test.js'
 import './list.css';
 
 class Rightlist extends Component{
@@ -15,7 +14,7 @@ class Rightlist extends Component{
                         Like
                     </h1>
                 </div>
-                <div className='list'>
+                <div className='list-pane'>
                     <div className='listdiv' >
                         <ul>
                         {this.props.like.length > 0 &&
@@ -23,7 +22,9 @@ class Rightlist extends Component{
                                 return(
                             <li>
                                 {e.breed}
-                                <img className='dog-pic' src={e.link} alt='a dog' />
+                                <div className='yep'>
+                                    <img className='dog-pic-pane' src={e.link} alt='a dog' />
+                                </div>
                                 <button value={e.id} onClick={e=> this.props.deleteDog('like', e.target.value)}>
                                     Delete
                                 </button>
@@ -39,7 +40,9 @@ class Rightlist extends Component{
                                 return(
                             <li>
                                 {e.breed}
-                                <img className='dog-pic' src={e.link} alt='a dog' />
+                                <div className='yep'>
+                                    <img className='dog-pic-pane' src={e.link} alt='a dog' />
+                                </div>
                                 <button value={e.id} onClick={e=> this.props.deleteDog('like', e.target.value)}>
                                     Delete
                                 </button>

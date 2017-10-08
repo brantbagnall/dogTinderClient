@@ -13,7 +13,10 @@ class Middle extends Component{
         return(
             <div className='middle-pane'>
                 <div>
-                        <button onClick={() => this.props.postDog('dislike')} >
+                        <button onClick={() =>{
+                            this.props.switchButton();
+                            this.props.postDog('dislike');
+                        }} disabled={this.props.disableButton} >
                             Dislike
                         </button>
                 </div>
@@ -21,7 +24,7 @@ class Middle extends Component{
                     <img className='dog-pic' src={this.props.currDog.link} alt='a dog' />
                 </div>
                 <div>
-                        <button onClick={() => this.props.postDog('like')}>
+                        <button onClick={() => this.props.postDog('like')} disabled={this.props.disableButton}>
                             Like
                         </button>
                 </div>
