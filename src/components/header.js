@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {test, test2} from './test.js'
 import './header.css'
 
 class Header extends Component {
@@ -20,13 +19,13 @@ class Header extends Component {
            <div className='user' >
               <div>
                     Breed:&nbsp;
-                    <select>
-                      <option>
+                    <select onChange={(e)=> this.props.changeBreed(e.target.value)}>
+                      <option value='All' key='All'>
                         All
                       </option>
-                      {test.message.map(e => {
+                      {this.props.header.breed.map(e => {
                         return (
-                          <option>
+                          <option value={e} key={e}>
                             {e}
                           </option>
                         )
@@ -35,21 +34,20 @@ class Header extends Component {
               </div>
               <div>
                 Sub-breed:&nbsp;
-                <select>
-                  <option>
-                    All
+                <select onChange={(e)=> this.props.changeSubBreed(e.target.value)} disabled={this.props.disableSub} value={this.props.header.subBreed}>
+                  <option value='None' key='None'>
+                    None
                   </option>
-                    {test2.message.map(e => {
+                    {this.props.subList.length > 0 &&
+                    this.props.subList.map(e => {
                       return (
-                        <option>
+                        <option value={e} key={e}>
                           {e}
                         </option>
                       )
-                    })}
+                    })
+                    }
                   </select>
-              </div>
-              <div>
-                Random? <input type="checkbox" />
               </div>
            </div>
           </div>

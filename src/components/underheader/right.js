@@ -13,7 +13,7 @@ class Right extends Component{
     render(){
         return(
             <div className='right-pane'>
-                <Rightlist />
+                <Rightlist like={this.props.like} deleteDog={this.props.deleteDog} />
             </div>
         )
     }

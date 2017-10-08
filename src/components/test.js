@@ -85,8 +85,7 @@ export var test = {
       }
       export var test2 ={
         status: 'success',
-        message: [ 
-            'All',
+        message: [
           'Ibizan',
           'afghan',
           'basset',

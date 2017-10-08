@@ -13,7 +13,7 @@ class Left extends Component{
     render(){
         return(
             <div className='left-pane'>
-                <Leftlist />
+                <Leftlist dislike={this.props.dislike} deleteDog={this.props.deleteDog}  />
             </div>
         )
     }

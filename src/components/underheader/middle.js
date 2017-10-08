@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import './middle.css'
-import dog from './dog.jpg'
-import dog2 from './dog2.jpg'
 
 class Middle extends Component{
     // constructor(){
@@ -15,13 +13,17 @@ class Middle extends Component{
         return(
             <div className='middle-pane'>
                 <div>
-                        <button>Dislike</button>
+                        <button onClick={() => this.props.postDog('dislike')} >
+                            Dislike
+                        </button>
                 </div>
                 <div className='pic-div' >
-                    <img className='dog-pic' src={dog2} alt='a dog' />
+                    <img className='dog-pic' src={this.props.currDog.link} alt='a dog' />
                 </div>
                 <div>
-                        <button>Like</button>
+                        <button onClick={() => this.props.postDog('like')}>
+                            Like
+                        </button>
                 </div>
             </div>
         )
