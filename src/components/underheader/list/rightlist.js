@@ -20,7 +20,7 @@ class Rightlist extends Component{
                         {this.props.like.length > 0 &&
                             this.props.like.filter((curr, i, arr)=> i% 2 === 0).map(e => {
                                 return(
-                            <li>
+                            <li key={e.id}>
                                 {e.breed}
                                 <div className='yep'>
                                     <img className='dog-pic-pane' src={e.link} alt='a dog' />
@@ -38,7 +38,7 @@ class Rightlist extends Component{
                         {this.props.like.length > 0 &&
                             this.props.like.filter((curr, i, arr)=> i% 2).map(e => {
                                 return(
-                            <li>
+                            <li key={e.id}>
                                 {e.breed}
                                 <div className='yep'>
                                     <img className='dog-pic-pane' src={e.link} alt='a dog' />

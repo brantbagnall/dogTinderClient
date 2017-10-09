@@ -16,7 +16,7 @@ class Underheader extends Component{
         return(
             <div className='flex-start2'>
                 <Left dislike={this.props.dislike} deleteDog={this.props.deleteDog}  />
-                <Middle currDog={this.props.currDog} postDog={this.props.postDog} disableButton={this.props.disableButton} switchButton={this.props.switchButton} />
+                <Middle currDog={this.props.currDog} postDog={this.props.postDog} switchButton={this.props.switchButton} />
                 <Right like={this.props.like} deleteDog={this.props.deleteDog}  />
             </div>
         )

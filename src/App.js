@@ -4,12 +4,11 @@ import axios from 'axios';
 import './App.css';
 import Header from './components/header.js'
 import Underheader from './components/Underheader.js'
-// import {breedList} from './controller/controller.js'
 
 class App extends Component {
   constructor(){
     super()
-    this.state=({
+    this.state={
       apiUrl:'http://localhost:3001/api/',
       header:{
         breed: [],
@@ -20,14 +19,12 @@ class App extends Component {
       subBreedList:[],
       like: [],
       dislike:[],
-      currDog:{},
-      disableButton: false
-    })
+      currDog:{}
+    }
     this.changeBreed = this.changeBreed.bind(this);
     this.changeSubBreed = this.changeSubBreed.bind(this);
     this.postDog = this.postDog.bind(this);
     this.deleteDog = this.deleteDog.bind(this);
-    this.switchButton = this.switchButton.bind(this);
   }
 
   componentDidMount(){
@@ -144,9 +141,6 @@ class App extends Component {
           dislike: e.data
         })
       }
-      this.setState({
-        disableButton:false
-      })
       this.changeCurrDog(this.state.header.selectedBreed, this.state.header.subBreed);
     })
   }
@@ -165,17 +159,11 @@ class App extends Component {
     })
   }
 
-  switchButton(){
-    this.setState({
-      disableButton:true
-    })
-  }
-
   render() {
     return (
       <div>
         <Header header={this.state.header} changeBreed={this.changeBreed} disableSub={this.state.disableSub} changeSubBreed={this.changeSubBreed} subList={this.state.subBreedList}/>
-        <Underheader header={this.state.header} currDog={this.state.currDog} like={this.state.like} dislike={this.state.dislike} postDog={this.postDog} deleteDog={this.deleteDog} disableButton={this.state.disableButton} switchButton={this.switchButton} />
+        <Underheader header={this.state.header} currDog={this.state.currDog} like={this.state.like} dislike={this.state.dislike} postDog={this.postDog} deleteDog={this.deleteDog} switchButton={this.switchButton} />
       </div>
     );
   }
