@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './list.css';
+import './font-awesome-4.7.0/css/font-awesome.css';
 
 class Leftliist extends Component{
     // constructor(){
@@ -11,7 +12,7 @@ class Leftliist extends Component{
             <div className='main' >
                 <div className='title'>
                     <h1>
-                        Dislike
+                      <i className='fa fa-frown-o' /> &nbsp; Dislike
                     </h1>
                 </div>
                 <div className='list-pane'>

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import './header.css'
+import './header.css';
+import dog from './dog.png'
 
 class Header extends Component {
     // constructor(){
@@ -14,7 +15,7 @@ class Header extends Component {
       return(
           <div className="header_start">
             <h1>
-              Dinder
+            <img className='dinder-icon' src={dog} alt='dinder icon' /> Dinder
             </h1>
            <div className='user' >
               <div>
@@ -34,7 +35,7 @@ class Header extends Component {
               </div>
               <div>
                 Sub-breed:&nbsp;
-                <select onChange={(e)=> this.props.changeSubBreed(e.target.value)} disabled={this.props.disableSub} value={this.props.header.subBreed}>
+                <select onChange={(e)=> this.props.changeSubBreed(e.target.value)} disabled={this.props.subList.length === 0 || this.props.disableSub} value={this.props.header.subBreed}>
                   <option value='None' key='None'>
                     None
                   </option>

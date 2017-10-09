@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './list.css';
+import './font-awesome-4.7.0/css/font-awesome.css';
 
 class Rightlist extends Component{
     // constructor(){
@@ -11,7 +12,7 @@ class Rightlist extends Component{
             <div className='main' >
                 <div className='title'>
                     <h1>
-                        Like
+                    <i className='fa fa-smile-o' /> &nbsp; Like
                     </h1>
                 </div>
                 <div className='list-pane'>
