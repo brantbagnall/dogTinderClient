@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import './reset.css';
 import axios from 'axios';
 import './App.css';
-import Header from './components/header.js'
-import Underheader from './components/Underheader.js'
+import Header from './components/header.js';
+import Underheader from './components/Underheader.js';
+import dogVideo from './Dog.mp4';
 
 class App extends Component {
   constructor(){
@@ -162,6 +163,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <video className='dog-video' autoPlay loop muted><source src={dogVideo} type="video/mp4" /> Your browser does not support the video tag. </video>
         <Header header={this.state.header} changeBreed={this.changeBreed} disableSub={this.state.disableSub} changeSubBreed={this.changeSubBreed} subList={this.state.subBreedList}/>
         <Underheader header={this.state.header} currDog={this.state.currDog} like={this.state.like} dislike={this.state.dislike} postDog={this.postDog} deleteDog={this.deleteDog} switchButton={this.switchButton} />
       </div>
